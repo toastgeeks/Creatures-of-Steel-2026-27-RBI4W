@@ -182,7 +182,6 @@ public class Auto extends OpMode {
             backRightMotor.setPower(power);
         }
 
-        // FIX #1: Time-based logic cleanly handled here
         if (step == 7) {
             if (!slideTimerReset) {
                 slideTimer.reset();
@@ -233,7 +232,6 @@ public class Auto extends OpMode {
         }
 
 
-        // FIX #2: Bracket relocated out of step 7 so step updates normally!
         if (step != 7) {
             if (!frontLeftMotor.isBusy() && !frontRightMotor.isBusy() && !backLeftMotor.isBusy() && !backRightMotor.isBusy()) {
                 step++;
